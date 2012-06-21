@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qt-XBMC-Remote</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow 
+{
+	background-color: #000;
+}
+
+QPushButton 
+{
+	background-color: #555;
+	color: #fff;
+	border-style:solid;
+	border-width:2px;
+	border-color: #ccc;
+	font-weight: bold;
+	padding: 3px;
+}
+
+ QPushButton:pressed 
+{
+     background-color: #f00;
+ }
+
+QTextEdit
+{
+	background-color: #5555cc;
+	color: #fff;
+	font-weight: bold;
+}
+
+QLabel
+{
+	color: #fff;
+	font-weigt: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="logo">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="buttonIcons.qrc">:/new/logos/XBMC_LOGO.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="groupBox" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="1" column="1">
+             <widget class="QPushButton" name="btnOK">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_8.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_8.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="btnUp">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_up.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_up.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="btnRight">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_right.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_right.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="btnHome">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_home.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_home.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="btnDown">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_down.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_down.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="btnLeft">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_left.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_arrow_left.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="btnBack">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_circle_arrow_left.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_circle_arrow_left.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btnVolDown">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_volume_down.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_volume_down.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="btnVolUp">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_volume_up.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_volume_up.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,0,0" rowminimumheight="0">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="btnStop">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_7.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_7.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btnRew">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_1.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_1.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="btnPlay">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_3.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_3.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QPushButton" name="btnFwd">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="buttonIcons.qrc">
+                <normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_2.png</normaloff>:/new/icons/twg_iphone_toolbar_icons/icon_controls_2.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Log:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="log">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="buttonIcons.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>doSend()</slot>
+ </slots>
+</ui>

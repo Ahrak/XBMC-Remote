@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/new/icons">
+        <file>twg_iphone_toolbar_icons/icon_arrow_down.png</file>
+        <file>twg_iphone_toolbar_icons/icon_arrow_left.png</file>
+        <file>twg_iphone_toolbar_icons/icon_arrow_right.png</file>
+        <file>twg_iphone_toolbar_icons/icon_arrow_up.png</file>
+        <file>twg_iphone_toolbar_icons/icon_circle_arrow_left.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_1.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_2.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_3.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_4.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_5.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_6.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_7.png</file>
+        <file>twg_iphone_toolbar_icons/icon_controls_8.png</file>
+        <file>twg_iphone_toolbar_icons/icon_home.png</file>
+        <file>twg_iphone_toolbar_icons/icon_volume.png</file>
+        <file>twg_iphone_toolbar_icons/icon_volume_down.png</file>
+        <file>twg_iphone_toolbar_icons/icon_volume_up.png</file>
+    </qresource>
+    <qresource prefix="/new/logos">
+        <file>XBMC_LOGO.jpg</file>
+    </qresource>
+</RCC>
