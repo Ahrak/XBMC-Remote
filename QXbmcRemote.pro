@@ -12,13 +12,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    QtWebSocket/QWsSocket.cpp \
-    QtWebSocket/QWsServer.cpp \
     remotebutton.cpp
 
 HEADERS  += mainwindow.h \
-    QtWebSocket/QWsSocket.h \
-    QtWebSocket/QWsServer.h \
     remotebutton.h
 
 FORMS    += mainwindow.ui
