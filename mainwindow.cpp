@@ -1,5 +1,4 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "includes.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -83,7 +82,9 @@ void MainWindow::httpFinished(QNetworkReply* reply)
     if(reply)
     {
          QString header = reply->readAll();
-         ui->log->append("RECEIVED:" + header + "\n");
+         //ui->log->append("RECEIVED:" + header + "\n");
+         QJsonResponse jsonResp = jsonParser.parseFromRequest(header);
+         ui->log->append("RECEIVED:" + jsonResp.toString() + "\n");
     }
 
 }

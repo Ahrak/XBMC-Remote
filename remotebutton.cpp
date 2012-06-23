@@ -1,4 +1,4 @@
-#include "remotebutton.h"
+#include "includes.h"
 
 RemoteButton::RemoteButton(QString name, int kkey,
                            QString command, QPushButton* btn)

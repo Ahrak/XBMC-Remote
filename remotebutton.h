@@ -1,8 +1,7 @@
 #ifndef REMOTEBUTTON_H
 #define REMOTEBUTTON_H
 
-#include <QString>
-#include <QPushButton>
+#include "includes.h"
 
 class RemoteButton
 {

@@ -1,19 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QNetworkAccessManager>
-#include <QUrl>
-#include <QNetworkReply>
-#include <QDebug>
-#include <QtNetwork>
-#include <QKeyEvent>
-#include <QPalette>
-
-#include "remotebutton.h"
+#include "includes.h"
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
 class MainWindow : public QMainWindow
@@ -27,6 +18,7 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *);
 private:
+
     Ui::MainWindow *ui;
     QNetworkAccessManager* qnam;
     QSignalMapper *signalMapper;
@@ -34,6 +26,8 @@ private:
     QString method;
 
     QMap<QString, RemoteButton*> KEY_MAP;
+
+    QJsonParser jsonParser;
 
     void initButtons();
 
