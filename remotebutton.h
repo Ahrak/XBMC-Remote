@@ -25,29 +25,29 @@ public:
      * getter for button name
      * @return QString button name
      */
-    QString name();
+    QString name() const;
 
     /**
      * getter for key code
      * @return int key code
      */
-    int key();
+    int key() const;
 
     /**
      * getter for command string
      * @return QString command string
      */
-    QString command();
+    QString command() const;
 
     /**
      * getter for gui button
      * @return QPushButton* pointer to gui button object
      */
-    QPushButton* button();
+    QPushButton* button() const;
 
 private:
 
-    /** button name *
+    /** button name */
     QString m_name;
 
     /** button keyboard code */

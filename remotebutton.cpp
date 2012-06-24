@@ -10,22 +10,22 @@ RemoteButton::RemoteButton(QString name, int kkey,
     //
 }
 
-QString RemoteButton::name()
+QString RemoteButton::name() const
 {
     return m_name;
 }
 
-int RemoteButton::key()
+int RemoteButton::key() const
 {
     return m_kkey;
 }
 
-QString RemoteButton::command()
+QString RemoteButton::command() const
 {
     return m_command;
 }
 
-QPushButton *RemoteButton::button()
+QPushButton *RemoteButton::button() const
 {
     return m_button;
 }
