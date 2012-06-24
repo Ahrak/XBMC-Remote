@@ -91,17 +91,9 @@ void MainWindow::httpFinished(QNetworkReply* reply)
 
 void MainWindow::doSend()
 {
-
-
-    QUrl url("http://192.168.1.173:8080/jsonrpc?UpdateState");
-    QNetworkRequest request(url);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-
-    QByteArray postData;
-    postData.append("{\"jsonrpc\": \"2.0\", \"method\": \""+method+"\", \"id\": 1}");
-    qnam->post(request, postData);
+    XBMCInterface::instance().send(qnam, method);
+    //iface.send(qnam, QVariant.fromValue(method));
     this->setFocus();
-
 }
 
 void MainWindow::sendKey(QString key)

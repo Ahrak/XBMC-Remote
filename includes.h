@@ -8,14 +8,14 @@
 //-----------
 
 #include <QObject>
-//
-#include <QtNetwork>
-#include <QNetworkAccessManager>
 #include <QDebug>
 //
 #include <QtGui>
 #include <QKeyEvent>
 #include <QMapIterator>
+//
+#include <QtNetwork>
+#include <QNetworkAccessManager>
 //
 #include <QtScript/QScriptEngine>
 #include <QtScript/QScriptValue>
@@ -29,7 +29,9 @@
 
 //
 #include "json.h"
-#include "qjsonparser.h"
+#include "config.h"
+#include "interface.h"
+#include "jsonparser.h"
 #include "remotebutton.h"
 #include "mainwindow.h"
 

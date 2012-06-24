@@ -14,14 +14,18 @@ PRECOMPILED_HEADER = includes.h
 SOURCES += main.cpp\
         mainwindow.cpp \
     remotebutton.cpp \
-    qjsonparser.cpp \
-    json.cpp
+    json.cpp \
+    config.cpp \
+    interface.cpp \
+    jsonparser.cpp
 
 HEADERS  += includes.h \
     mainwindow.h \
     remotebutton.h \
-    qjsonparser.h \
-    json.h
+    json.h \
+    config.h \
+    interface.h \
+    jsonparser.h
 
 FORMS  += mainwindow.ui
 

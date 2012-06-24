@@ -1,9 +1,10 @@
-#ifndef QJSONPARSER_H
-#define QJSONPARSER_H
+#ifndef JSONPARSER_H
+#define JSONPARSER_H
 
 #include <QString>
 #include <QVariant>
 #include <QVariantMap>
+#include <QStringList>
 
 /**
  * container for XBMC JSON Messages
@@ -47,7 +48,16 @@ struct XBMCMessage
         }
         else
         {
-            return QString("OK");
+            QStringList list;
+            QMapIterator<QString, QVariant> i(result);
+            while (i.hasNext()) {
+
+               i.next();
+               QString s = QString("%1: %2").arg(i.key()).arg(i.value().toString());
+               list.append(s);
+               //
+            }
+            return QString("OK (%1)").arg(list.join(","));
         }
     }
 };
@@ -73,4 +83,4 @@ public:
     XBMCMessage parseFromRequest(const QString& result) const;
 };
 
-#endif // QJSONPARSER_H
+#endif // JSONPARSER_H

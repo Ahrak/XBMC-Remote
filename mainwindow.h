@@ -6,9 +6,21 @@
 #include <QtNetwork>
 #include <QMap>
 
-#include <qjsonparser.h>
-
+#include "jsonparser.h"
 #include "remotebutton.h"
+
+
+class PingThread : public QThread
+{
+    Q_OBJECT
+
+protected:
+    void run()
+    {
+        //
+    };
+};
+
 
 namespace Ui {
     class MainWindow;
