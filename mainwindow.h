@@ -1,7 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "includes.h"
+#include <QObject>
+#include <QMainWindow>
+#include <QtNetwork>
+#include <QMap>
+
+#include <qjsonparser.h>
+
+#include "remotebutton.h"
 
 namespace Ui {
     class MainWindow;

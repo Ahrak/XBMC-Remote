@@ -1,6 +1,12 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
+// __________ PRECOMPILED HEADER _________________
+
+
+//QT-INCLUDES
+//-----------
+
 #include <QObject>
 //
 #include <QtNetwork>
@@ -14,6 +20,9 @@
 #include <QtScript/QScriptEngine>
 #include <QtScript/QScriptValue>
 
+
+//MY-INCLUDES
+//-----------
 
 //
 #include "ui_mainwindow.h"

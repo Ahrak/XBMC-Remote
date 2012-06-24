@@ -17,13 +17,13 @@ SOURCES += main.cpp\
     qjsonparser.cpp \
     json.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += includes.h \
+    mainwindow.h \
     remotebutton.h \
     qjsonparser.h \
-    includes.h \
     json.h
 
-FORMS    += mainwindow.ui
+FORMS  += mainwindow.ui
 
 RESOURCES += \
     buttonIcons.qrc

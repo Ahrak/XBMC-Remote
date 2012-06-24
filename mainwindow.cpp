@@ -83,7 +83,7 @@ void MainWindow::httpFinished(QNetworkReply* reply)
     {
          QString header = reply->readAll();
          //ui->log->append("RECEIVED:" + header + "\n");
-         QJsonResponse jsonResp = jsonParser.parseFromRequest(header);
+         XBMCMessage jsonResp = jsonParser.parseFromRequest(header);
          ui->log->append("RECEIVED:" + jsonResp.toString() + "\n");
     }
 

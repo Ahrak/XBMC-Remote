@@ -1,13 +1,18 @@
 #ifndef QJSONPARSER_H
 #define QJSONPARSER_H
 
-#include "includes.h"
+#include <QString>
+#include <QVariant>
+#include <QVariantMap>
 
-
-struct QJsonResponse
+/**
+ * container for XBMC JSON Messages
+ * @author tommy hartmann <toha@zlug.org>
+ */
+struct XBMCMessage
 {
 
-    QJsonResponse()
+    XBMCMessage()
     {
         version = "UNKNOWN";
         method = "UNKNOWN";
@@ -15,17 +20,26 @@ struct QJsonResponse
         isError = false;
     }
 
+    /** api version */
     QString version;
 
+    /** method /command string */
     QString method;
 
+    /** communication ID */
     int ID;
 
+    /** flag if message is an error message */
     bool isError;
 
+    /** result part of message */
     QVariantMap result;
 
-    QString toString()
+    /**
+     * generates a string of the message object
+     * @return QString object string
+     */
+    QString toString() const
     {
         if(isError)
         {
@@ -38,52 +52,25 @@ struct QJsonResponse
     }
 };
 
+
+/**
+ * Class that handles serializing and deserializing of
+ * XBMC messages.
+ */
 class QJsonParser
 {
 public:
+
+    /**
+     * Constructor
+     */
     QJsonParser();
 
-    QJsonResponse parseFromRequest(const QString& result) const
-    {
-        QVariantMap jsonObject = JSON::instance().parse(result);
-        QJsonResponse jsonResponse;
-
-
-        QMapIterator<QString, QVariant> i(jsonObject);
-        while (i.hasNext()) {
-           i.next();
-           qDebug() << i.key() << ": " << i.value() << endl;
-        }
-
-        //ERROR
-        QVariant error = jsonObject.value("error");
-        if (error.isValid() )
-        {
-            jsonResponse.isError = true;
-            QVariantMap data = error.toMap();
-            jsonResponse.result.insert("message", data.value("message"));
-            return jsonResponse;
-        }
-
-        /*
-        //RESPONSE
-        QScriptValue vResult = sc.property("result");
-        if (vResult.isArray())
-        {
-           QStringList items;
-           qScriptValueToSequence(vResult, items);
-           foreach (QString str, items) {
-               jsonResponse.result.insert(str, str);
-           }
-        }
-        else if(vResult.isString())
-        {
-               jsonResponse.result.insert("result", vResult.toString());
-        }
-        */
-        return jsonResponse;
-
-    }
+    /**
+     * parse XBMC message from response string
+     * @param QString result response string
+     */
+    XBMCMessage parseFromRequest(const QString& result) const;
 };
 
 #endif // QJSONPARSER_H
